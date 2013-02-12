@@ -1,0 +1,54 @@
+{
+   "abstract" : "cron based timers for AnyEvent",
+   "author" : [
+      "haarg - Graham Knop (cpan:HAARG) <haarg@haarg.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "ExtUtils::MakeMaker version 6.64, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "AnyEvent-Timer-Cron",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::More" : "0.94"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "AnyEvent" : "0",
+            "DateTime" : "0",
+            "DateTime::Event::Cron" : "0",
+            "Moo" : "1.000007",
+            "Safe::Isa" : "0",
+            "Task::Weaken" : "0",
+            "namespace::clean" : "0",
+            "perl" : "5.8"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "homepage" : "http://github.com/haarg/AnyEvent-Timer-Cron",
+      "repository" : {
+         "url" : "git://github.com/haarg/AnyEvent-Timer-Cron.git"
+      }
+   },
+   "version" : "0.001000"
+}

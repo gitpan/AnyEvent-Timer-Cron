@@ -1,0 +1,50 @@
+NAME
+    AnyEvent::Timer::Cron - cron based timers for AnyEvent
+
+SYNOPSIS
+        use AnyEvent;
+        use AnyEvent::Timer::Cron;
+
+        my $w; $w = AnyEvent::Timer::Cron->new(cron => '0 1 * * *', cb => sub {
+            undef $w;
+            ...
+        });
+        AnyEvent->condvar->recv;
+
+DESCRIPTION
+    This module creates timers based on cron rules.
+
+    This module primarily exists to replace similar that try to do too much
+    work, instead providing the simplest implementation, and using
+    AnyEvent's standard conventions for timer lifetime.
+
+METHODS
+  new( cron => $cron, cb => sub {} )
+    Creates a new cron timer. The callback will be called continually
+    according to the cron rules until the object is destroted.
+
+    cron
+        Required. A cron rule, either in string form or as a
+        DateTime::Event::Cron, DateTime::Event::Cron::Quartz, or
+        DateTime::Set object.
+
+    cb  Required. The callback to call for the cron events.
+
+SEE ALSO
+    AnyEvent::Cron
+    AnyEvent::DateTime::Cron
+
+AUTHOR
+    haarg - Graham Knop (cpan:HAARG) <haarg@haarg.org>
+
+  CONTRIBUTORS
+    None yet.
+
+COPYRIGHT
+    Copyright (c) 2013 the AnyEvent::Timer::Cron "AUTHOR" and "CONTRIBUTORS"
+    as listed above.
+
+LICENSE
+    This library is free software and may be distributed under the same
+    terms as perl itself.
+
